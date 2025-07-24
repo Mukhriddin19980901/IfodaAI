@@ -47,8 +47,6 @@ def test(image_path):
         max_idx = arr.argmax()
         arr_no_max = arr[ arr != arr[max_idx] ]
         max_idx = np.argmax(arr_no_max)
-        arr_no_max = arr_no_max[ arr_no_max!= arr_no_max[max_idx] ]
-        max_idx = np.argmax(arr_no_max)
     prediction = idx_to_name[max_idx ]
     print("Aniqlangan kasallik nomi :", prediction)
     return idx_to_name[max_idx]    

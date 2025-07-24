@@ -79,6 +79,6 @@ json_path = 'model_weights_res18.json'
 with open(json_path, 'w') as f:
     json.dump(state, f, cls=TensorEncoder)
 
-print(f"Modelimiz  {epochs} ta  epochda o'qitildi! \n Model o'qitilgandagi oxirgi xatoligi  - {(train_losses)*100} % \n Modelni baholashdagi xatolik -  {(val_losses)*100} % \n Modelning aniqlilik darajasi  - {(val_accs)*100} %")
+print(f"Modelimiz  {epochs} ta  epochda o'qitildi! \n Model o'qitilgandagi oxirgi xatoligi  - {(train_losses[-1])*100} % \n Modelni baholashdagi xatolik -  {(val_losses[-1])*100} % \n Modelning aniqlilik darajasi  - {(val_accs[-1])*100} %")
 
 print(f"✅ Model weightlari {json_path} ko'rinishida JSON formatda saqlandi ")
